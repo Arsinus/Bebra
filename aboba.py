@@ -6,6 +6,7 @@ from dataloader import *
 from test_qugan import *
 import base64
 
+
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
