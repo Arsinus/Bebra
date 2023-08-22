@@ -1,0 +1,21 @@
+import pennylane.numpy as np
+LATENT_DIM = 2
+eps = 0.
+depth = 5
+N_a = 1
+N_dim = 2
+num_layer_weights = 3 * (N_a + N_dim) - 1
+learning_rate = 0.01
+A = 2
+B = 1
+C = 5
+HELLINGER_RES = 10
+NOISE_SCALE = 0.3
+NUM_WORKERS = 2
+NUM_EPOCHS = 1
+BATCH_SIZE = 32
+NUM_SAMPLES = 800
+NUM_SAMPLES_HELL = 1000
+num_deep_layer_weights = num_layer_weights * depth
+image_size = 10
+max_norm = np.pi / 2
