@@ -116,7 +116,7 @@ with st.container():
     index = st.slider("Weights", 0, len(files) - 1)
     disc_weights, gen_weights = load_weights("weights/model-{}-{}-{}.txt".format(index // BATCH_SIZE, 0, index % BATCH_SIZE))
     n_sc = col1.slider("Noise:", 0., 0.5, NOISE_SCALE)
-    save_lanent_space_foraboba(n_sc, disc_weights, gen_weights, latent_clusters[int(files[index][6])], image_size, int(files[index][6]), 100)
+    save_lanent_space_foraboba(n_sc, disc_weights, gen_weights, latent_clusters[index // BATCH_SIZE], image_size, index // BATCH_SIZE, 100)
     col1.image("aboba/show_progress.png", width=WIDTH_3)
 
 
